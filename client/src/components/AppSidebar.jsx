@@ -9,7 +9,7 @@ import {
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { Link } from "react-router-dom"
-import logo from '@/assets/images/logo-white.png'
+import logo from '@/assets/images/logo.png'
 import { IoHomeOutline } from "react-icons/io5";
 import { BiCategoryAlt } from "react-icons/bi";
 import { GrBlog } from "react-icons/gr";
@@ -31,14 +31,14 @@ const AppSidebar = () => {
 
     return (
         <Sidebar>
-            <SidebarHeader className="bg-white">
-                <img src={logo} width={120} />
+            <SidebarHeader className="bg-black">
+                <img src={logo} width={200} />
             </SidebarHeader>
             <SidebarContent className="bg-white">
                 <SidebarGroup>
                     <SidebarMenu>
                         <SidebarMenuItem>
-                            <Link to={"http://127.0.0.1:5501/index.html"} >
+                            <Link to={"https://cybosecure.com/"} >
                                 <SidebarMenuButton>
                                     <IoHomeOutline />
                                     Home

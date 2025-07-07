@@ -6,7 +6,7 @@ import { getEvn } from "./getEnv";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: getEvn('VITE-FIREBASE_API_KEY'),
+  apiKey: "AIzaSyAN4zlZyTVnkPbWgjuFAw6Q69V7OVTW52Q",
   authDomain: "cybo-blog.firebaseapp.com",
   projectId: "cybo-blog",
   storageBucket: "cybo-blog.firebasestorage.app",

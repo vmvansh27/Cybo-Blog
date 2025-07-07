@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import logo from '@/assets/images/logo-white.png'
-import logo from "@/assets/images/mieux_logo2.png";
+import logo from "@/assets/images/logo.png";
 import { Button } from "./ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { MdLogin } from "react-icons/md";
@@ -66,24 +66,22 @@ const Topbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-16 fixed w-full z-20 bg-white px-5 border-b">
+    <div className="flex justify-between items-center h-16 fixed w-full z-20 bg-black px-5 border-b">
       <div className="flex  items-center gap-2">
-        <button onClick={toggleSidebar} className="md:hidden" type="button">
+        <button onClick={toggleSidebar} className="md:hidden" type="button" style={{ color: "white" }}>
           <AiOutlineMenu />
         </button>
         <Link
           to={RouteIndex}
-          className="object-contain md: w-100  md:h-100"
-          style={{ width: "60%" }}
+          className="object-contain w-auto h-10" // Changed from w-100 to w-auto and set fixed height
         >
-          <img src={logo} />
+          <img src={logo} className="h-full w-auto" />
         </Link>
       </div>
       <div className="w-[500px]">
         <div
-          className={`md:relative md:block absolute bg-white  left-0 w-full md:top-0 top-16 md:p-0 p-5 ${
-            showSearch ? "block" : "hidden"
-          }`}
+          className={`md:relative md:block absolute bg-white  left-0 w-full md:top-0 top-16 md:p-0 p-5 ${showSearch ? "block" : "hidden"
+            }`}
         >
           <SearchBox />
         </div>
@@ -97,59 +95,6 @@ const Topbar = () => {
           <IoMdSearch size={25} />
         </button>
 
-        {/* {!user.isLoggedIn ?
-                    <Button asChild className="rounded-full">
-                        <Link to={RouteSignIn}  >
-                            <MdLogin />
-                            Sign In
-                        </Link>
-                    </Button>
-                    :
-                    <DropdownMenu>
-                        <DropdownMenuTrigger>
-                            <Avatar>
-                                <AvatarImage src={user.user.avatar || usericon} />
-                            </Avatar>
-
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuLabel>
-                                <p>{user.user.name}</p>
-                                <p className='text-sm'>{user.user.email}</p>
-                            </DropdownMenuLabel>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem asChild className="cursor-pointer">
-                                <Link to={RouteProfile}>
-                                    <FaRegUser />
-                                    Profile
-                                </Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem asChild className="cursor-pointer">
-                                <Link to={RouteBlogAdd}>
-                                    <FaPlus />
-                                    Create Blog
-                                </Link>
-                            </DropdownMenuItem>
-
-                            <DropdownMenuSeparator />
-
-                            <DropdownMenuItem onClick={handleLogout} className="cursor-pointer">
-                                <IoLogOutOutline color='red' />
-                                Logout
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-
-                } */}
-
-        {/* {user.isLoggedIn
-
-                    <Button className="rounded-full" onClick={handleLogout}>
-                    <IoLogOutOutline color='red' />
-                            Logout
-                    </Button>
-                
-                } */}
 
         {user.isLoggedIn && (
           <Button
