@@ -13,7 +13,7 @@ import { getEvn } from '@/helpers/getEnv'
 import { useDispatch } from 'react-redux'
 import { setUser } from '@/redux/user/user.slice'
 import GoogleLogin from '@/components/GoogleLogin'
-import logo from '@/assets/images/mieux_logo.png'
+import logo from '@/assets/images/logo.png'
 import backgroundImg from '@/assets/images/background.jpg'
 
 const SignIn = () => {
@@ -57,23 +57,25 @@ const SignIn = () => {
 
     return (
         <div
-  className='flex justify-center items-center h-screen w-screen'
-  style={{
-    backgroundImage: `url(${backgroundImg})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
->
+            className='flex justify-center items-center h-screen w-screen'
+            style={{
+                backgroundImage: `url(${backgroundImg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+        >
 
-            <Card className="w-[400px] p-5" style={{ backgroundColor: "rgba(255, 255, 255, 0.05)",
-                        backdropFilter: "blur(12px)"}}>  
+            <Card className="w-[400px] p-5" style={{
+                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(12px)"
+            }}>
                 <div className='flex justify-center items-center mb-2'>
 
                     <Link to={RouteIndex} >
-                        <img src={logo} style={{width:140}} />
+                        <img src={logo} style={{ width: 140 }} />
                     </Link>
                 </div>
-                <h1 className='text-2xl font-bold text-center mb-5' style={{color:"#e8e8e8"}}>Login Into Account</h1>
+                <h1 className='text-2xl font-bold text-center mb-5' style={{ color: "#e8e8e8" }}>Login Into Account</h1>
                 <div className=''>
                     {/* <GoogleLogin /> */}
                     {/* <div className='border my-5 flex justify-center items-center'>
@@ -90,9 +92,9 @@ const SignIn = () => {
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel style={{color:"#e8e8e8"}}>Email</FormLabel>
+                                        <FormLabel style={{ color: "#e8e8e8" }}>Email</FormLabel>
                                         <FormControl>
-                                            <Input  className="text-white placeholder-gray-300" placeholder="Enter your email address" {...field}/>
+                                            <Input className="text-white placeholder-gray-300" placeholder="Enter your email address" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -105,9 +107,9 @@ const SignIn = () => {
                                 name="password"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel style={{color:"#e8e8e8"}}>Password</FormLabel>
+                                        <FormLabel style={{ color: "#e8e8e8" }}>Password</FormLabel>
                                         <FormControl>
-                                            <Input type="password"  className="text-white placeholder-gray-300" placeholder="Enter your password" {...field} />
+                                            <Input type="password" className="text-white placeholder-gray-300" placeholder="Enter your password" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>

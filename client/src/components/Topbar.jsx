@@ -66,16 +66,27 @@ const Topbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-16 fixed w-full z-20 bg-black px-5 border-b">
+    <div className="flex justify-between items-center h-14 fixed w-full z-20 bg-bluee px-5 border-b">
       <div className="flex  items-center gap-2">
         <button onClick={toggleSidebar} className="md:hidden" type="button" style={{ color: "white" }}>
           <AiOutlineMenu />
         </button>
-        <Link
+        {/* <Link
           to={RouteIndex}
           className="object-contain w-auto h-10" // Changed from w-100 to w-auto and set fixed height
         >
           <img src={logo} className="h-full w-auto" />
+        </Link> */}
+
+        <Link
+          to={RouteIndex}
+          className="object-contain h-16 sm:h-10 w-auto" // Even larger on mobile (h-16 = 64px)
+        >
+          <img
+            src={logo}
+            className="h-full w-auto max-w-[180px] sm:max-w-none" // Constrains mobile width
+            alt="Company Logo"
+          />
         </Link>
       </div>
       <div className="w-[500px]">

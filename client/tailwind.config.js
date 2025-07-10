@@ -101,6 +101,10 @@ export default {
           DEFAULT: '#3594d5', // 🔵 your custom primary color
           foreground: '#ffffff'
         },
+        bluee: {
+          DEFAULT: '#0F3181', // 🔵 your custom primary color
+          foreground: '#ffffff'
+        },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))'

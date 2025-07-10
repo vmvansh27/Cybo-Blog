@@ -31,7 +31,7 @@ const AppSidebar = () => {
 
     return (
         <Sidebar>
-            <SidebarHeader className="bg-black">
+            <SidebarHeader className="bg-bluee">
                 <img src={logo} width={200} />
             </SidebarHeader>
             <SidebarContent className="bg-white">
@@ -134,3 +134,5 @@ const AppSidebar = () => {
 }
 
 export default AppSidebar
+
+
